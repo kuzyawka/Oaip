@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem znachenie virazheniya so sravnitelnoi operaziey: ");
+	int a; int b; int rez; int x;
+	printf("\nVvedem a: ");
+	scanf_s("%d", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%d", &b);
+	rez = (a*b)-3;
+	
+		if (a - b == 0)
+		{
+			printf("\nResultat= %i", rez);
+		}
+		else
+		{
+			b = b + 1;
+			rez = (a * b) - 3;
+			printf("\nResultat= %i", rez);
+		}
+	
+	return 0;
+}
