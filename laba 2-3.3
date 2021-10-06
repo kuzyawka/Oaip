@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem znachenie virazheniya so sravnitelnoi i ziklicehkoi operaziyami: ");
+	int a; int b; int rez;
+	printf("\nVvedem a: ");
+		scanf_s("%d", &a);
+		printf("\nVvedem b: ");
+		scanf_s("%d", &b);
+		if (a > b)
+		{
+			if (a - b == 0)
+			{
+				rez = a * b - 3;
+				printf("\nRezultat = %i", rez);
+			}
+			else
+			{
+				while (a - b != 0)
+				{
+					b = b + 1;
+				}
+				rez = a * b - 3;
+				printf("\nRezultat = %i", rez);
+			}
+		}
+		else
+		{
+			if (b-a == 0)
+			{
+				rez = a * b - 3;
+				printf("\nRezultat = %i", rez);
+			}
+			else
+			{
+				while (b-a != 0)
+				{
+					a = a + 1;
+				}
+				rez = a * b - 3;
+				printf("\nRezultat = %i", rez);
+			}
+		}
+	return 0;
+}
