@@ -8,8 +8,9 @@ int main()
 	scanf_s("%d", &a);
 	printf("\nVvedem b: ");
 	scanf_s("%d", &b);
-	rez = (a*b)-3;
-	
+	rez = (a * b) - 3;
+	if (a > b)
+	{
 		if (a - b == 0)
 		{
 			printf("\nResultat= %i", rez);
@@ -20,6 +21,20 @@ int main()
 			rez = (a * b) - 3;
 			printf("\nResultat= %i", rez);
 		}
-	
+	}
+	else
+	{
+		if (b - a == 0)
+		{
+			printf("\nResultat= %i", rez);
+		}
+		else
+		{
+			a = a + 1;
+			rez = (a * b) - 3;
+			printf("\nResultat= %i", rez);
+		}
+	}
+
 	return 0;
 }
