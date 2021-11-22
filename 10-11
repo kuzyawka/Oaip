@@ -29,3 +29,32 @@ int main()
 while   
 
 
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Algoritm sortirovki Shella :");
+	int array[] = { 2, 6, 23, 0, 3, -5, 9 }; int d, i, j,a; int n = sizeof(array) / sizeof(int);
+	d = n / 2;
+	while (d > 0){
+		i = d;
+		while (i < n){
+			a = array[i];
+		j = i;
+		while (j >= d) {
+			if (a < array[j - d]) {
+				array[j] = array[j - d];
+				j = j - d;
+			}
+			else break;
+		}
+		array[j] = a;
+		i++;
+		}
+		d /= 2;
+	}
+	for (i = 0; i < n; i++)
+		printf("%d", array[i] );
+	return 0;
+}
