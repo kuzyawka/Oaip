@@ -1,0 +1,31 @@
+for
+
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Algoritm sortirovki Shella :");
+	int array[] = { 2, 6, 23, 0, 3, -5, 9 }; int d, i, j,a; int n = sizeof(array) / sizeof(int);
+	for (d = n / 2; d > 0; d /= 2) {
+		for (i = d; i < n; i++) {
+			a = array[i];
+			for (j = i; j >= d; j -= d) {
+				if (a<array[j - d] )
+					array[j] = array[j - d];
+				else break;
+			}
+			array[j] = a;
+		}
+	}
+	for (i = 0; i < n; i++)
+		printf("%d", array[i] );
+	return 0;
+}
+
+
+
+while   
+
+
